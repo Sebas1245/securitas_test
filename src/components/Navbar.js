@@ -12,7 +12,7 @@ class NavBar extends Component {
                      width="104"
                      height="45"
                      className="d-inline-block align-top"
-                     alt=""/>{' '}
+                     alt="Securitas México Logo"/>{' '}
                      <span className="ml-3 align-middle">Securitas México</span>
                 </Navbar.Brand>
                 <Nav className="ml-auto">
