@@ -6,7 +6,7 @@ import Logo from '../assets/img/logo_final.png'
 class NavBar extends Component {
     render(){
         return(
-            <Navbar sticky="top" bg="light" variant="light">
+            <Navbar sticky="top" expand="md" bg="light" variant="light">
                 <Navbar.Brand className="align-middle">
                     <img src={ Logo }
                      width="104"
