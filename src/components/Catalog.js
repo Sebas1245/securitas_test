@@ -41,7 +41,7 @@ function Catalog(){
             <Col xs={12} md={6} lg={3} key={item.id}>
                 <Card>
                     <AnimationWrapper>
-                        <Card.Img top 
+                        <Card.Img top="true" 
                         src={item.img1} 
                         onMouseOver={(e) => {
                             e.currentTarget.src = item.img2;
