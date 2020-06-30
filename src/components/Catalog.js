@@ -22,8 +22,6 @@ import Lanix2 from '../assets/img/catalog/lanix2.jpg';
 import Candado1 from '../assets/img/catalog/candado1.jpg';
 import Candado2 from '../assets/img/catalog/candado2.jpg';
 
-// css import 
-import '../index.css'
 
 function Catalog(){
     const items = [
