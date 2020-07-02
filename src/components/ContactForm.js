@@ -45,7 +45,7 @@ class ContactForm extends Component {
                 <Form.Row className="m-2">
                     <Col>
                         <Form.Control id="subject" className="mx-auto my-2" type="text" placeholder="Asunto" onChange={this.handleChange}></Form.Control>
-                        <Form.Control id="message" as="textarea" rows="5" placeholder="Escríbenos tu mensaje" onChange={this.handleChange}></Form.Control>
+                        <Form.Control id="message" as="textarea" rows="5" placeholder="¿Cómo te podemos ayudar?" onChange={this.handleChange}></Form.Control>
                     </Col>
                 </Form.Row>
                 <Form.Row className="justify-content-center">
