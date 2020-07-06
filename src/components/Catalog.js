@@ -22,6 +22,7 @@ import Lanix1 from '../assets/img/catalog/lanix1.jpg';
 import Lanix2 from '../assets/img/catalog/lanix2.jpg';
 import Candado1 from '../assets/img/catalog/candado1.jpg';
 import Candado2 from '../assets/img/catalog/candado2.jpg';
+import WebDev from '../assets/img/catalog/webDev.jpg'
 
 const descriptions = [
     'Plataforma de autocapacitación en línea CONTPAQi® Kursa ayuda a todos los usuarios de los sistemas CONTPAQi® que quieran sacar el mayor provecho de los sistemas y estar al día con los cambios fiscales y obligaciones de ley. \n Es una herramienta de autocapacitación en línea que te permite aprender a tu propio ritmo y de acuerdo a tus necesidades. Te brinda el conocimiento que necesitas para que seas un experto en temas fiscales y en los sistemas CONTPAQi®', 
@@ -31,7 +32,8 @@ const descriptions = [
     'Scooter eléctrico para uso desde en parques hasta plantas para agilizar la movilización del personal de seguridad.',
     'Apiax VoIp Server es un sistema completo de Telefonía, con todas las características de un sistema de PBX corporativo y muchas más a un costo realmente accesible. Además proporciona servicios no disponibles en estos grandes conmutadores como son: extensiones remotas, llamadas gratuitas entre sedes, grabación de llamadas, administración remota vía web, números de teléfono de otros países, etc. Sin Limites de Conexiones ni de tiempo de llamadas donde exista Internet.',
     'Tenemos para ti la Tablet Lanix que se convertirá en tu herramienta útil para escuela trabajo u oficina. No desaproveches esta oportunidad y llévatela ahora',
-    'Una cerradura electrónica con función de rastreo GPS, puede ser rastreada en tiempo real y desbloqueada por la tarjeta RFID en el sitio o de forma remota mediante una aplicación móvil, SMS o software; longitud del cable de bloqueo flexible, ricas alertas a prueba de manipulaciones disponibles, batería de larga duración de 15,000 mAh. es el diseño de candado para seguridad de contenedores, caja fuerte de aluminio / seguro de acero al carbono con función de rastreo GPS, puede ser desbloqueado por bluetooth en el sitio y es compatible con el desbloqueo remoto de SMS / software.'
+    'Una cerradura electrónica con función de rastreo GPS, puede ser rastreada en tiempo real y desbloqueada por la tarjeta RFID en el sitio o de forma remota mediante una aplicación móvil, SMS o software.',
+    'Desde desarrollos de sitios empresariales de una sola página (como la que estas usando en este momento), hasta desarrollo de aplicaciones web complejas. Ponte en contacto con nosotros si deseas obtener una cotización basada en tus necesidades.'
 ]
 
 const characteristics = [
@@ -42,10 +44,11 @@ const characteristics = [
     'Peso: 47kg / 57kg \n Dimensiones: 82 * 46 * 110 cm \n Tamaño del embalaje: 90 * 52 * 63 cm \n Velocidad máx: 20 km / h \n Carga máx .: 125 kg \n Millaje máximo: 30-35 km \n Capacidad de ascenso máximo: 10-30 grados Min. \n Radio de giro: 0 ° \n Tiempo de carga completo: 6 h-8 h \n Batería recargable: batería de litio 48V / 11AH o 72V 8.8AH \n Potencia del motor: 2 * 1000W Brush DC Motor \n Voltaje: 110 V-240 V, 50 / 60Hz \n Neumático Taiwan Kenda Tire, neumático de vacío de 19 pulgadas \n Temperatura de trabajo: -10 ° -40 ° \n Color: negro, blanco, rojo, azul, amarillo, verde',
     'Comunicaciones como Servicio Administrado con o sin paquetes de Llamadas. \n Ahorro hasta un 50% contra Telefonía \n Convencional. \n Configuraciones a la medida del Cliente. \n Encriptación anti escucha de las llamadas. \n Se ejecuta directamente desde la web. \n Interconexión protocolo abierto SIP para cualquier tipo de teléfono VoIP. \n Monitoreo de Call-Center.',
     'Pantalla 10\'\' \n Procesador Rock Chip Quad Core \n Camara 1.3 MP + 5.0 MP \n Almacenamiento 16 GB \n Memoria RAM 1GB \n Android 8.0',
-    ''
+    'Longitud del cable de bloqueo flexible \n Alertas avanzadas a prueba de manipulaciones disponibles \n Batería de larga duración de 15,000 mAh. \n Diseño de candado para seguridad de contenedores, caja fuerte de aluminio / seguro de acero al carbono con función de rastreo GPS \n Desbloqueable mediante bluetooth en el sitio \n Compatible con el desbloqueo remoto de SMS / software',
+    'Cotización del sistema realizada después de etapa de análisis y requerimientos para conocer las necesidades del cliente \n Oportunidad de involucramiento del cliente mediante uso de metodologías ágiles \n Proponer cambios adicionales a los requerimientos iniciales (opcional) \n Mantenimiento y desarollo de módulos adicionales (opcional)'
 ]
 function Catalog(){
-    
+
     const items = [
         {id: 1,title: 'Kursa Plataforma de Autocapacitación', price: '$1,990.00', img1: Kursa1, img2: Kursa2, description: descriptions[0], characteristic: characteristics[0] },
         {id: 2,title: 'HandHeld Mobilix con Android 7.0', price: '$14,000.00', img1: HandheldMobilix1 , img2: HandheldMobilix2, description: descriptions[1], characteristic: characteristics[1]},
@@ -55,10 +58,11 @@ function Catalog(){
         {id: 6,title: 'Extensión SIP para Conmutador en la Nube APIAX', price: '$250.00', img1: Apiax1 , img2: Apiax2, description: descriptions[5], characteristic: characteristics[5]},
         {id: 7,title: 'Tablet Lanix 10\'\' Ilium Pad E10', price: '$2,250.00', img1: Lanix1 , img2: Lanix2, description: descriptions[6], characteristic: characteristics[6]},
         {id: 8,title: 'Candado Electrónico JT705 con GPS para Cajas Secas y Contenedores', price: '$13,500.00', img1: Candado1 , img2: Candado2, description: descriptions[7], characteristic: characteristics[7]},
+        {id: 9,title: 'Desarrollo de aplicaciones Web', price: 'Dependiente de cotización', img1: WebDev, img2: WebDev, description: descriptions[8],characteristic: characteristics[8]}
     ]
     const itemList = items.map( item => {
         return (
-            <Col xs={12} md={6} lg={3} key={item.id}>
+            <Col xs={12} md={4} lg={4} key={item.id}>
                 <Card>
                     <AnimationWrapper>
                         <Card.Img top="true" 
