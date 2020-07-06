@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -17,11 +18,39 @@ class ContactForm extends Component {
             [e.target.id]: e.target.value
         })
     }
+    clearForm = () => {
+        document.getElementById('contact-form').reset();
+    }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
-        let form = document.getElementById('contact-form');
-        form.reset();
+        const name = this.state.name;
+        const organization = this.state.organization;
+        const phone = this.state.phone;
+        const email = this.state.email;
+        const subject = this.state.subject;
+        const message = this.state.message;
+        axios({
+            method: 'POST',
+            url:"http://localhost:5000/send",
+            data: {
+                name,
+                organization,
+                phone,
+                email,
+                subject,
+                message
+            }
+        }).then((response)=> {
+            if(response.data.msg === 'success') {
+                // DESIGN USER FEEDBACK BEFORE CLEARING FORM
+                alert('Email sent!');
+                this.clearForm();
+            }
+            else if(response.data.msg === 'fail'){
+                alert("Message failed to send");
+            }
+        })
+
     }
     render() {
         return (
