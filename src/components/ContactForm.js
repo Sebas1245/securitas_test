@@ -23,10 +23,15 @@ class ContactForm extends Component {
         document.getElementById('contact-form').reset();
     }
     handleSubmit = (e) => {
+        e.preventDefault()
         const form = e.currentTarget;
         if(form.checkValidity() === false){
             e.preventDefault();
             e.stopPropagation();
+            document.querySelector("#responseMessage").style.display = 'none';
+            this.setState({
+                validated: true
+            })
         }else{
             const name = this.state.name;
             const organization = this.state.organization;
@@ -49,6 +54,9 @@ class ContactForm extends Component {
                 if(response.data.msg === 'success') {
                     // DESIGN USER FEEDBACK BEFORE CLEARING FORM
                     document.querySelector("#responseMessage").style.display = 'block';
+                    this.setState({
+                        validated: false
+                    })
                     this.clearForm();
                 }
                 else if(response.data.msg === 'fail'){
@@ -56,9 +64,6 @@ class ContactForm extends Component {
                 }
             })
         }
-        this.setState({
-            validated: true
-        })
     }
     render() {
         return (
