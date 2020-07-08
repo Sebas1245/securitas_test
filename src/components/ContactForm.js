@@ -36,7 +36,7 @@ class ContactForm extends Component {
             const message = this.state.message;
             axios({
                 method: 'POST',
-                url:"http://localhost:5000/send",
+                url:"https://securitas-mailer.herokuapp.com/send",
                 data: {
                     name,
                     organization,
