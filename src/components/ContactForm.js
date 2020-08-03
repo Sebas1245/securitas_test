@@ -33,6 +33,7 @@ class ContactForm extends Component {
                 validated: true
             })
         }else{
+            const appName = 'Securitas';
             const name = this.state.name;
             const organization = this.state.organization;
             const phone = this.state.phone;
@@ -43,6 +44,7 @@ class ContactForm extends Component {
                 method: 'POST',
                 url:"https://securitas-mailer.herokuapp.com/send",
                 data: {
+                    appName,
                     name,
                     organization,
                     phone,
@@ -95,7 +97,7 @@ class ContactForm extends Component {
                 <Form.Row>
                 </Form.Row>
                 <Form.Row className="justify-content-center">
-                    <Button type="submit" variant="warning" className="text-light">Enviar</Button>
+                    <Button type="submit" className="text-light">Enviar</Button>
                 </Form.Row>
             </Form>
 
